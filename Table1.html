@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Types of Tables in HTML</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background: #f5f7fa;
+            color:#333;
+        }
+        h2{
+            margin-top: 40px;
+            color: #2c3e50;
+
+        }
+        table{
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background: white;
+        }
+        caption{
+            caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+        th,td{
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        th{
+            background-color: #2c3e50;
+            color: white;
+
+        }
+        tfoot td{
+            background: #ecf0f1;
+            font-weight: bold;
+
+        }
+        .responsive-container{
+            overflow-x: auto;
+
+        }
+        .responsive{
+            width: 100%;
+            min-width: 500px;
+
+        }
+        .striped tbody tr:nth-child(even){ 
+            background: #f9f9f9;
+
+        }
+        .row-colored tbody tr:nth-child(2){
+            background: #F9E79F;
+        }
+        .row-colored tbody tr:nth-child(4){
+            background: #F9E79F;
+        }
+        .col-coloured td:nth-child(2){
+            background: #F9E79F;
+
+        }
+        .col-coloured td:nth-child(4){
+            background: #F9E79F;
+        }
+        #hoverable tr:hover{
+            background-color: chartreuse;
+
+        }
+        #dotted th, #dotted td{
+            border:dotted black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Different Types of Tables in HTML</h1>
+    <h2>1. Table With Headers</h2>
+    <table>
+        <tr>
+        <th>Roll Number</th>
+        <th>Name</th>
+        <th>Marks</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Priya</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Jeevitha</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Bhuvana</td>
+            <td>90</td>
+        </tr>
+        </table>
+    <h2>2.Table With Caption</h2>
+    <table>
+        <caption>Employee Details</caption>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Malar</td>
+            <td>HR</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Prajan</td>
+            <td>IT</td>
+        </tr>
+    </table>
+    <h2>Grouped Table(thead,tbody,tfoot)</h2>
+    <table>
+        <caption>Students Mark</caption>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Science</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Niki</td>
+            <td>78</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>sana</td>
+            <td>82</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Sara</td>
+            <td>77</td>
+            <td>81</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Average</td>
+            <td>79</td>
+            <td>86.33</td>
+        </tr>
+    </tfoot>
+    </table>
+    <h2>4.Table With Rowspan And Colspan</h2>
+    <table>
+        <caption>Class Schedule</caption>
+        <tr>
+            <th>Day</th>
+            <th> 9 to 10 AM </th>
+            <th> 10 to 11 Am </th>
+            <th> 11 to 12 Am </th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td rowspan="2">Maths</td>
+            <td>Science</td>
+            <td>History</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td colspan="2">Computer Science</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Sports</td>
+            <td>Geography</td>
+            <td>English</td>
+        </tr>
+    </table>
+    <h2>5.Nested Table</h2>
+    <table>
+        <caption>Department</caption>
+        <tr>
+            <th>Department></th>
+            <th>Employee</th>
+        </tr>
+        <tr>
+            <td>IT</td>
+            <td>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Priya</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>swathi</td>
+                    <td>Tester</td>
+                </tr>
+
+            </table>
+            </td>
+        </tr>
+    </table>
+    <h2>6.Striped Table</h2>
+    <table class="striped">
+        <caption>Product List</caption>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Laptop</td>
+            <td>$800</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>phone</td>
+            <td>$500</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Tablet</td>
+            <td>$650</td>
+        </tr>
+    </table>
+    <h2>7.Responsive Table</h2>
+    <div class="responsive-container"></div>
+        <table class="responsive">
+            <caption>Large Data Table</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Hari priya</td>
+            <td>25</td>
+            <td>Chennai</td>
+            <td>Computer Science</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Aiswariya</td>
+            <td>21</td>
+            <td>Chennai</td>
+            <td>Computer Science</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>Viji</td>
+            <td>21</td>
+            <td>Chennai</td>
+            <td>Computer Science</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td>Susmitha</td>
+            <td>25</td>
+            <td>Chennai</td>
+            <td>Computer Science</td>
+            <td>82</td>
+        </tr>
+        </table>
+    </div>
+    <h2>8.Table With Row Coloring</h2>
+    <table class="row-colored">
+        <caption>Row Highlight Example</caption>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Mark</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>hari</td>
+            <td>Chennai</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>vishnu</td>
+            <td>banglore</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>gokul</td>
+            <td>Mumbai</td>
+            <td>98</td>
+        </tr>
+
+    </table>
+    <h2>8.Table with Column Colouring</h2>
+    <table class="col-coloured">
+    <caption>Column Colouring Highlight</caption>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Amit</td>
+      <td>Delhi</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Priya</td>
+      <td>Mumbai</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Raj</td>
+      <td>Kolkata</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Simran</td>
+      <td>Chennai</td>
+      <td>95</td>
+    </tr>
+    </table>
+    <h2>9. Vertical Column Table</h2>
+    <table>
+        <caption>Attendance</caption>
+        <tr>
+            <th>Name</th>
+            <td>Harini</td>
+            <td>Shiny</td>
+            <td>Visa</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>22</td>
+            <td>23</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <th>Attendance</th>
+            <td>Absent</td>
+            <td>Present</td>
+            <td>Present</td>
+        </tr>
+    </table>
+    <h2>10. Hoverable Table</h2>
+    <table id="hoverable">
+        <caption>Rank List</caption>
+        <tr>
+            <th>Name</th>
+            <th>Mark</th>
+            <th>Rank</th>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>90</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Satish</td>
+            <td>86</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>karan</td>
+            <td>78</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <h2>11. Rounded Border</h2>
+    <table id="dotted">
+        <caption>Profession</caption>
+        <tr>
+            <th>Name</th>
+            <th>Profession</th>
+        </tr>
+        <tr>
+            <td>Priya</td>
+            <td>Engineer</td>
+        </tr>
+        <tr>
+            <td>jeevi</td>
+            <td>Doctor</td>
+        </tr>
+        <tr>
+            <td>Abi</td>
+            <td>Lawyer</td>
+        </tr>
+    </table>
+    <h2>12. Unorder List</h2>
+    <ul>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Pineapple</li>
+    </ul>
+    <h2>12. Order List</h2>
+    <ol>
+        <li>Wake Up Early in the Morning</li>
+        <li>Have Your Breakfast
+            <ul>
+                <li>Don't Skip Your Breakfast</li>
+                <li>It Leads To Sever Health Problem</li>
+            </ul>
+        </li>
+        <li>Be Active Throughout The Day</li>
+    </ol>
+    
+</body>
+</html>
